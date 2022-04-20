@@ -1,0 +1,4 @@
+{
+	"CameraProperties" : {"fx" : 13, "fy" : 13, "cx" : 320, "cy" : 240},
+	"CameraEnviroment" : {"distance" : 200, "n" : [100, -3, -174], "t" : [3, 1, -1], "step" : 30}
+}
