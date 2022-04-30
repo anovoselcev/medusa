@@ -4,6 +4,7 @@
 #include <glm/geometric.hpp>
 #include <range/v3/all.hpp>
 #include <fstream>
+#include <iostream>
 
 
 #include <images/Segmentation.hpp>
@@ -18,7 +19,14 @@ namespace medusa{
                        : laserDir(laserPath),
                        backDir(backPath),
                        config(configFile),
-                       name(name){}
+                       name(name){
+
+        std::cout << "\n\033[3;42;30mMedusa running with:\033[0m\n"
+                  << "name: " << name << "\n"
+                  << "laser folder: " << std::filesystem::absolute(laserDir).string() << "\n"
+                  << "background folder: " << std::filesystem::absolute(backDir).string() << "\n"
+                  << "config file: " << std::filesystem::absolute(config).string() << "\n\n";
+    }
 
     WorkLoad& WorkLoad::readLaserImages(){
         for(const auto& file : std::filesystem::directory_iterator(laserDir)){

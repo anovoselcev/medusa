@@ -6,6 +6,8 @@
 #include <sstream>
 #include <tuple>
 #include <vector>
+#include <iostream>
+#include <filesystem>
 
 namespace medusa::mdl{
 
@@ -45,6 +47,7 @@ namespace medusa::mdl{
             }
 
             file << ss.str();
+            std::cout << "Dumped: " << std::filesystem::absolute(name_ + ".obj").string() << "\n";
         }
     };
 
