@@ -292,9 +292,6 @@ namespace medusa::alg{
          for(const auto& face : finalFaces){
             res.push_back({face.p[0], face.p[1], face.p[2]});
          }
-         std::cout << "Faces size = " << res.size() << std::endl;
-         std::cout << "Not proccessed faces = " << faces_.size() << std::endl;
-         std::cout << "Max proccessed faces = " << maxFaces << std::endl;
          return res;
       }
          
